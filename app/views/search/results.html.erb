@@ -1,0 +1,11 @@
+<h2>Post Found: <%=@posts.size %></h2>
+
+<%if @posts.empty? %>
+  <p>No posts found.</p>
+<% else %>
+  <ul>
+  <% @posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+  <% end %>
+  </ul>
+<% end %>
