@@ -1,0 +1,14 @@
+<div class="reply clearfix">
+  <div class="reply">
+    <p class="reply_content">
+      <%= reply.reply %>
+    </p>
+    <p class="reply_author">
+      <%= reply.user.email %>
+    </p>
+  </div>
+  <div class="buttons">
+    <%= link_to "Edit", edit_post_reply_path(reply.post, reply) %>
+    <%= link_to "Delete", [reply.post, reply], method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+</div>

@@ -10,13 +10,13 @@
   <%= @post.content %>
 </p>
 
-<div id="comments">
+<div id="replies">
   <h2>
-    <%= @post.comments.count %>
-    <%= render @post.comments %>
+    <%= @post.replies.count %>
   </h2>
-  <h3>Reply to thread</h3>
-  <%= render "comments/form" %>
+  <%= render @post.replies %>
+  <h3>Answer to thred</h3>
+  <%= render "replies/form" %>
 </div>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
